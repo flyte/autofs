@@ -7,8 +7,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "nfs"
-
 package "autofs"
 
 service "autofs" do

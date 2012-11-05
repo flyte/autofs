@@ -1,4 +1,4 @@
-maintainer        "37signals"
-maintainer_email  "sysadmins@37signals.com"
+maintainer        "Flyte"
+maintainer_email  "autofs-github@failcode.co.uk"
 description       "Configures the automount daemon"
-version           "0.1"
+version           "0.2"

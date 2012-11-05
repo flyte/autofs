@@ -5,13 +5,13 @@
 # This is an automounter map and it has the following format
 # key [ -mount-options-separated-by-comma ] location
 # For details of the format look at autofs(5).
-<% if @node[:autofs][:smb] %>
+<% if @smb %>
 /smb   /etc/auto.smb
 <% end %>
 #/misc  /etc/auto.misc
-<% if @node[:autofs][:net] %>
+<% if @net %>
 /net   /etc/auto.net --ghost
 <% end %>
-<% @node[:autofs][:maps].each do |map, opts| %>
+<% @maps.each do |map, opts| %>
 <%= map %> <%= opts[:source] %>
 <% end %>

@@ -8,6 +8,7 @@
 #
 
 package "autofs"
+package "smbfs"
 
 service "autofs" do
 	supports [ :start, :stop, :restart, :reload, :status ]

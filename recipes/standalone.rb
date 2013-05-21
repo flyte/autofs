@@ -14,6 +14,11 @@ template "/etc/auto.master" do
   owner "root"
   group "root"
   mode "0644"
+  variables(
+    :smb => false,
+    :net => false,
+    :maps => node[:autofs][:maps]
+  )
   notifies :reload, resources(:service => "autofs"), :immediately
 end
 

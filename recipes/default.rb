@@ -8,7 +8,9 @@
 #
 
 package "autofs"
-package "smbfs"
+
+# Install smbfs package, unless we are on ubuntu 13.x
+package platform?("ubuntu") && node['platform_version'].to_f >= 12.10 ? "cifs-utils" : "smbfs"
 
 service "autofs" do
 	supports [ :start, :stop, :restart, :reload, :status ]

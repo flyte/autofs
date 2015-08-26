@@ -1,3 +1,4 @@
+name		  "autofs"
 maintainer        "Flyte"
 maintainer_email  "autofs-github@failcode.co.uk"
 description       "Configures the automount daemon"
